@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Computing?</title>
+    <style>
+        body {
+            background-color: pink;
+            color: white;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            position: relative;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+            cursor: none;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-style: italic;
+            font-weight: bold;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        .heart {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            transform: rotate(-45deg);
+            animation: float 6s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 25px;
+            top: 0;
+        }
+
+        .heart1 {
+            top: 20%;
+            left: 10%;
+            animation-duration: 6s;
+        }
+
+        .heart2 {
+            top: 40%;
+            left: 50%;
+            animation-duration: 8s;
+        }
+
+        .heart3 {
+            top: 60%;
+            left: 80%;
+            animation-duration: 7s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(-45deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(-45deg);
+            }
+            100% {
+                transform: translateY(0) rotate(-45deg);
+            }
+        }
+
+        .content {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        .photos {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .photos img {
+            width: 45%;
+            border-radius: 10px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: white;
+            color: pink;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #eee;
+        }
+
+        #cursor {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 10000;
+        }
+
+        .binary-photo {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            opacity: 0.7;
+        }
+
+        .top-left {
+            top: 20px;
+            left: 20px;
+        }
+
+        .bottom-right {
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cursor"></div>
+    <h1>Why Computing?</h1>
+    <div class="content">
+        <div class="section">
+            <p>My brother also works in the tech field, and I've always looked up to him. I want to make a difference as a black girl in tech, showing that we can excel in this field. I love designing things and making them unique to me, just like this website. Ever since I was a child, I've been fascinated by computers and their capabilities.</p>
+            <p2>I'm still learning in this big tech filled world but I know I can make a differnce if i try! :D </p2>
+        </div>
+        <div class="photos">
+            <img src="photo1.jpg" alt="Photo placeholder 1">
+            <img src="photo2.jpg" alt="Photo placeholder 2">
+        </div>
+        <div class="button-container">
+            <a href="page 3.html"><button class="button">Next Page</button></a>
+        </div>
+    </div>
+    <div class="heart heart1"></div>
+    <div class="heart heart2"></div>
+    <div class="heart heart3"></div>
+
+    <img src="binary1.jpg" alt="Binary Code 1" class="binary-photo top-left">
+    <img src="binary2.jpg" alt="Binary Code 2" class="binary-photo bottom-right">
+
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const cursor = document.getElementById('cursor');
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        });
+    </script>
+</body>
+</html>
+    
